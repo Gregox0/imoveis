@@ -19,17 +19,17 @@
           <div id="form">
             <div id="inputLineEmail">
               <i class="fa-solid fa-user"></i>
-              <input type="email" placeholder="exemplo@gmail.com">
+              <input type="email" placeholder="exemplo@gmail.com" id="email">
             </div>
             <div id="inputLine">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Ex-12345">
-              <i class="fa-regular fa-eye-slash"></i>
+              <input type="password" placeholder="Ex-12345" id="pass">
+              <i class="fa-regular fa-eye-slash" onclick="change('eye')" id="eye"></i>
             </div>
           </div>
           <div id="submit">
             <button>Logar</button>
-            <p id="es">Já tem uma conta? <span>Clique aqui.</span></p>
+            <p id="es">Ainda não tem uma conta? <span onclick="change('')">Clique aqui.</span></p>
           </div>
         </div>
     </div>
