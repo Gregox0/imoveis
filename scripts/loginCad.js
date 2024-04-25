@@ -41,9 +41,23 @@ function change(type){
 }
 
 
-let passRegex = /^(?.*[A-Z])[a-zA-Z0-9_.-]{8,}$/
-let emailRegex = /^[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z]{2,}$/
+let emailregex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+let passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d_.-]{8,}$/;
 function verify(){
   let emailInput = document.getElementById('email')
   let passInput = document.getElementById('pass')
+  if(!emailregex.test(emailInput.value)){
+    setTimeout(() => {
+      document.getElementById('inputLineEmail').style.borderColor= '#007ea7'
+    },1000)
+    document.getElementById('inputLineEmail').style.borderColor = 'red'
+    return
+    }
+  if(!passregex.test(passInput.value)){
+    setTimeout(() => {
+      document.getElementById('inputLine').style.borderColor= '#007ea7'
+      },1000)
+      document.getElementById('inputLine').style.borderColor = 'red'
+      return
+    }
 }
