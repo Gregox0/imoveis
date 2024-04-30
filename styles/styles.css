@@ -5,7 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 header{
-  margin: 10px;
+  margin: 15px;
 
   display: flex;
   justify-content: space-between;
@@ -53,4 +53,137 @@ nav p:hover{
 #logButton:hover{
   background-color: #027399;
   color: #fff;
+}
+aside{
+  margin-top: 20px;
+  margin-left: 30px;
+  
+  display: inline-block;
+}
+#buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 10px;
+}
+#buttons button{
+  margin: 5px;
+  
+  border: 0;
+  background-color: transparent;
+}
+#buttonSelect{
+  color: #007ea7;
+}
+#borderBottom{
+  height: 2px;
+  width: 100%;
+  
+  background: linear-gradient(to right, #007ea7 50%, #ccc 50%);
+}
+#select{
+  margin: 10px;
+  padding: 15px;
+  
+  border-bottom: 2px solid #ccc;
+}
+label{
+  color: #898989;
+}
+#selectContainer{
+  padding: 8px 15px;
+  
+  display: flex;
+  justify-content: center;
+  
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #ccc;
+}
+#iContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#amount{
+  color: transparent;
+}
+#iContainer i{
+  color: #007ea7;
+}
+#preco{
+  margin: 10px;
+  padding: 15px;
+  
+  border-bottom: 2px solid #ccc;
+}
+#p{
+  color: #898989;
+}
+#preco label{
+  color: #ccc;
+}
+.inputLinePreco{
+  padding: 5px;
+  margin-right: 5px;
+  
+  display: flex;
+  
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.inputLinePreco input{
+  width: 100px;
+  
+  border: 0;
+  background-color: transparent;
+  color: #ccc;
+}
+.buttons{
+  display: flex;
+}
+.inputLinePreco p{
+  color: #007ea7;
+}
+#info{
+  margin: 10px;
+  padding: 15px;
+
+  
+  border-bottom: 2px solid #ccc;
+}
+#infoContainer button{
+  padding: 8px 15px;
+  
+  height: 40px;
+  width: 65px;
+  
+  background-color: transparent;
+  color: #007ea7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+#submit{
+  padding: 10px;
+  margin: 10px;
+  
+  display: flex;
+  justify-content: space-between;
+}
+#limpar{
+  padding: 10px;
+  
+  background-color: transparent;
+  color: #007ea7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+#enviar{
+  padding: 10px;
+
+  background-color: #007ea7;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
