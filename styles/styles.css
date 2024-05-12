@@ -6,6 +6,7 @@
 }
 header{
   margin: 15px;
+  
 
   display: flex;
   justify-content: space-between;
@@ -53,6 +54,9 @@ nav p:hover{
 #logButton:hover{
   background-color: #027399;
   color: #fff;
+}
+main{
+  display: flex;
 }
 aside{
   margin-top: 20px;
@@ -105,9 +109,6 @@ label{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#amount{
-  color: transparent;
 }
 #iContainer i{
   color: #007ea7;
@@ -186,4 +187,62 @@ label{
   color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+}
+#searchBarContainer{
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  
+  width: 100%;
+}
+#searchBar{
+  padding: 10px;
+  
+  width: 90%;
+  
+  display: flex;
+  align-items: center;
+  
+  border: 1px solid #007ea7;
+  border-radius: 3px
+}
+#searchBar input{
+  width: 100%;
+  
+  outline: 0;
+  border: 0;
+}
+#searchBar i{
+  color: #007ea7;
+}
+#iAf{
+  margin: 5px;
+  
+  display: flex;
+  justify-content: space-between;
+  
+  width: 90%;
+}
+#filtro{
+  display: flex;
+  align-items: center;
+}
+#filtro i{
+  color: #007ea7;
+}
+#filtro p{
+  color: #898989;
+}
+#amount p{
+  color: #ccc;
+  font-size: small;
+}
+#amount span{
+  color: #898989;
 }
