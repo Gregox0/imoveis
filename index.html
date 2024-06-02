@@ -27,69 +27,117 @@
       <aside>
         <div id="top">
           <div id="buttons">
-            <button id="buttonSelect">Comprar</button>
-            <button>Alugar</button>
+            <button id="c" class="buttonSelect" onclick="toggle('c')">Comprar</button>
+            <button id="a" onclick="toggle('a')">Alugar</button>
           </div>
           <div id="borderBottom"></div>
         </div>
         <div id="select">
           <label>Tipo de imovel</label>
-          <div id="selectContainer">
+          <div id="selectContainer" onclick="mostrarOpcoes()">
             <p>Todos os apartamentos</p>
             <div id="iContainer">
               <i class="fa-solid fa-chevron-up"></i>
             </div>
           </div>
+          <div id="optionsContainer">
+            <p>Residencial</p>
+            <div class="opc">
+              <div class="option">
+                <input type="checkbox" value=RA"">
+                <p>Apartamento</p>
+              </div>
+              <div class="option">
+                <input type="checkbox" value="RK">
+                <p>Kitnet</p>
+              </div>
+              <div class="option">
+                <input type="checkbox" value="RCC">
+                <p>Casa de condomínio</p>
+              </div>
+              <div class="option">
+                <input type="checkbox" value="RTL">
+                <p>Terreno / lote</p>
+              </div>
+              <div class="option">
+                <input type="checkbox" value="RFSC">
+                <p>Fazenda / sítio / chácara</p>
+              </div>
+              <p>Comercial</p>
+              <div class="opc">
+                <div class="option">
+                  <input type="checkbox" value="CLSP">
+                  <p>Loja / salão / ponto comercial</p>
+                </div>
+                <div class="option">
+                  <input type="checkbox" value="CHMP">
+                  <p>Hotel / Motel / Pousada</p>
+                </div>
+                <div class="option">
+                  <input type="checkbox" value="CGDA">
+                  <p>Galpão / Deposito / Armazém </p>
+                </div>
+                <div class="option">
+                  <input type="checkbox" value="CG">
+                  <p>Garagem</p>
+                </div>
+                <div class="option">
+                  <input type="checkbox" value="CTLC">
+                   <p>Terreno / lote comercial </p>
+                </div>
+              </div>
+            </div>
         </div>
-        <div id="preco">
+        </div>
+        <div class="preco">
           <p id="p">Preço</p>
           <div class="buttons">
             <div class="buttonContainer">
               <label>min</label>
               <div class="inputLinePreco">
                 <p>R$</p>
-                <input type="text" value="0">
+                <input type="text" id="precoMin" placeholder="0">
               </div>
             </div>
             <div class="buttonContainer">
               <label>max</label>
               <div class="inputLinePreco">
                 <p>R$</p>
-                <input type="text" value="0">
+                <input type="text" id="precoMax" placeholder="0">
               </div>
             </div>
           </div>
         </div>
         <div id="info">
           <label>Banheiros</label>
-          <div id="infoContainer">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4+</button>
+          <div class="infoContainer">
+            <button onclick="bathroomCount('1')" id="br1" class="infoContainerbutton">1</button>
+            <button onclick="bathroomCount('2')" id="br2" class="infoContainerbutton">2</button>
+            <button onclick="bathroomCount('3')" id="br3" class="infoContainerbutton">3</button>
+            <button onclick="bathroomCount('4')" id="br4" class="infoContainerbutton">4+</button>
           </div>
           <label>Quartos</label>
-          <div id="infoContainer">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4+</button>
+          <div class="infoContainer">
+            <button onclick="roomsCount('1')" id="r1" class="infoContainerbutton">1</button>
+            <button onclick="roomsCount('2')" id="r2" class="infoContainerbutton">2</button>
+            <button onclick="roomsCount('3')" id="r3" class="infoContainerbutton">3</button>
+            <button onclick="roomsCount('4')" id="r4" class="infoContainerbutton">4+</button>
           </div>
         </div>
-        <div id="preco">
+        <div class="preco">
           <p id="p">Área</p>
           <div class="buttons">
             <div class="buttonContainer">
               <label>min</label>
-              <div class="inputLinePreco">
-                <input type="text" value="0">
+              <div class="inputLineSize">
+                <input type="text" id="sizeMin" placeholder="0">
                 <p>m²</p>
               </div>
             </div>
             <div class="buttonContainer">
               <label>max</label>
-              <div class="inputLinePreco">
-                <input type="text" value="0">
+              <div class="inputLineSize">
+                <input type="text" id="sizeMax" placeholder="0">
                 <p>m²</p>
               </div>
             </div>
@@ -97,7 +145,7 @@
         </div>
         <div id="submit">
           <button id="limpar">Limpar</button>
-          <button id="enviar">Pesquisar</button>
+          <button id="enviar" onclick="verify()">Pesquisar</button>
         </div>
       </aside>
       <div id="main">
@@ -108,7 +156,7 @@
           </div>
           <div id="iAf">
             <div id="amount">
-              <p>Imóveis á venda</p>
+              <p>Imóveis disponíveis</p>
               <span>1 imóveis em todo o brasil</span>
             </div>
             <div id="filtro">
