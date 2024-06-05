@@ -307,3 +307,63 @@ label{
   
   transition: 0.3s all ease;
 }
+#imoveisContainer{
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.imovel{
+  margin-bottom: 30px;
+  
+  display: flex;
+  
+  height: 170px;
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#imgSide img{
+  height: 170px;
+  width: 250px;
+  
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#otherSide{
+  margin: 5px;
+}
+#local{
+  font-size: small;
+}
+#local p{
+  color: #898989;
+}
+#local span{
+  color: #ccc;
+}
+#desc{
+  font-size: small;
+  color: #898989;
+}
+#infoImovel{
+  margin-top: 10px;
+  
+  color: #898989;
+  font-size: small;
+}
+#finalizarCompra{
+  height: 35%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#finalizarCompra button{
+  padding: 8px;
+
+  background-color: #007ea7;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
