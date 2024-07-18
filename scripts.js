@@ -11,13 +11,13 @@ function toggle(type){
   if(type == 'a'){
     document.getElementById('c').classList.remove('buttonSelect')
     document.getElementById('a').classList.add('buttonSelect')
-    document.getElementById('borderBottom').style.background = 'linear-gradient(to right, #ccc 50%, #007ea7 50%)'
+    document.getElementById('borderBottom').style.background = 'linear-gradient(to right, #ccc 50%, #7b2cbf 50%)'
     estado = true
   }
   if (type == 'c') {
     document.getElementById('a').classList.remove('buttonSelect')
     document.getElementById('c').classList.add('buttonSelect')
-    document.getElementById('borderBottom').style.background = 'linear-gradient(to right, #007ea7 50%, #ccc 50%)'
+    document.getElementById('borderBottom').style.background = 'linear-gradient(to right, #7b2cbf 50%, #ccc 50%)'
     estado = false
   }
 }
@@ -118,3 +118,79 @@ function verify() {
     rooms: rm,
   }
 }
+function limparCheckboxes() {
+  let checkboxes = document.querySelectorAll('.option input[type="checkbox"]');
+  checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
+  });
+  checkedValues = []; 
+}
+
+let checkedValues = [];
+
+
+document.getElementById('limpar').addEventListener('click', function() {
+  limparBathroomRooms()
+  limparCheckboxes(); 
+  document.getElementById('sizeMin').value = ''; 
+  document.getElementById('sizeMax').value = '';
+  document.getElementById('precoMin').value = '';
+  document.getElementById('precoMax').value = '';
+})
+
+function limparBathroomRooms() {
+  for (let i = 1; i <= 4; i++) {
+    document.getElementById('br' + i).classList.remove('infoContainerbuttonclicked');
+    document.getElementById('br' + i).classList.add('infoContainerbutton');
+    document.getElementById('r' + i).classList.remove('infoContainerbuttonclicked');
+    document.getElementById('r' + i).classList.add('infoContainerbutton');
+  }
+  br = 0;
+  r = 0;
+  currentbr = null;
+  currentr = null;
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var checkboxes = document.querySelectorAll('#optionsContainer input[type="checkbox"]');
+  var barra = document.getElementById('barra');
+
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      var selectedItems = [];
+      checkboxes.forEach(function(cb) {
+        if (cb.checked) {
+          var labelText = document.querySelector('label[for="' + cb.id + '"]').textContent;
+          selectedItems.push(labelText.trim());
+        }
+      });
+      if (selectedItems.length > 0) {
+        barra.textContent = selectedItems.join(', ');
+      } else {
+        barra.textContent = 'Todos os apartamentos';
+      }
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function() {
+  const checkboxes = document.querySelectorAll('#optionsContainer input[type="checkbox"]');
+  const barra = document.getElementById('barra');
+
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      const selectedItems = [];
+      
+    
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          const labelText = checkboxes[i].nextElementSibling.textContent.trim();
+          barra.textContent = labelText;
+          return; 
+        }
+      }
+      
+      barra.textContent = 'Todos os apartamentos';
+    });
+  });
+
+  // Restante do seu código aqui...
+});
