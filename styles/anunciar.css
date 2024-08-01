@@ -14,7 +14,7 @@ header{
   justify-content: space-between;
 }
 header span{
-  color: #007ea7;
+  color: #7b2cbf;
 }
 nav{
   display: flex;
@@ -26,15 +26,15 @@ nav p{
   transition: all ease 0.3s;
 }
 nav p:hover{
-  color: #007ea7;
+  color: #7b2cbf;
   cursor: pointer;
 }
 #cadButton{
   padding: 10px;
 
-  background-color: #007ea7;
+  background-color: #7b2cbf;
   color: #fff;
-  border: 2px solid #007ea7;
+  border: 2px solid #7b2cbf;
   border-radius: 10px;
 
   transition: all ease 0.3s;
@@ -47,8 +47,8 @@ nav p:hover{
   padding: 10px 15px;
 
   background-color: transparent;
-  color: #027399;
-  border: 2px solid #007ea7;
+  color: #7b2cbf;
+  border: 2px solid #7b2cbf;
   border-radius: 10px;
 
   transition: all ease 0.3s;
@@ -80,8 +80,8 @@ main{
   width: 150px;
 
   background-color: transparent;
-  color: #027399;
-  border: 1px solid #007ea7;
+  color: #7b2cbf;
+  border: 1px solid #7b2cbf;
   border-radius: 3px;
 }
 #selectContainer{
@@ -91,7 +91,7 @@ main{
   display: flex;
   justify-content: center;
   
-  border: 1px solid #007ea7;
+  border: 1px solid #7b2cbf;
   border-radius: 3px;
   color: #ccc;
 }
@@ -101,7 +101,7 @@ main{
   align-items: center;
 }
 #iContainer i{
-  color: #007ea7;
+  color: #7b2cbf;
 }
 #cadE{
   margin-top: 15px;
@@ -109,8 +109,8 @@ main{
 .ciE{
   display: flex;
 }
-.ciE label{
-  color: #ccc;
+.ciElabel{
+  color: #7b2cbf;
 }
 #cidadeContainer, #estadoContainer{
   margin-right: 5px;
@@ -145,7 +145,7 @@ main{
   flex-direction: column;
 }
 #enderecoContainer label{
-  color: #ccc;
+  color: #7b2cbf;
 }
 #endereco{
   padding: 10px;
@@ -164,7 +164,7 @@ main{
   flex-direction: column;
 }
 #numeroContainer label{
-  color: #ccc;
+  color: #7b2cbf;
 }
 #numero{
   padding: 10px;
@@ -184,7 +184,7 @@ main{
   flex-direction: column;
 }
 #complementoContainer label{
-  color: #ccc;
+  color: #7b2cbf;
 }
 #complemento{
   padding: 10px;
@@ -202,13 +202,13 @@ main{
   
   width: 318px;
   
-  background-color: #007ea7;
+  background-color: #7b2cbf;
   border: 0;
   border-radius: 3px;
   color: #fff;
 }
 .dpNo{
-  display: none;
+    display: none;
 }
 .selected {
   padding: 10px 15px;
@@ -216,8 +216,83 @@ main{
 
   width: 150px;
 
-  background-color: #007ea7;
+  background-color: #7b2cbf;
   color: #fff;
-  border: 1px solid #007ea7;
+  border: 1px solid #7b2cbf;
   border-radius: 3px;
+}
+#info{
+    padding: 10px;
+}
+#info label{
+    color: #898989;
+}
+.infoContainerbutton{
+    padding: 8px 15px;
+    
+    height: 50px;
+    width: 70px;
+    
+    background-color: transparent;
+    color: #7b2cbf;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+    transition: 0.3s all ease;
+}
+.preco{
+    margin: 10px;
+    padding: 15px;
+}
+#p{
+    color: #898989;
+}
+#preco label{
+    color: #ccc;
+}
+.buttons{
+    display: flex;
+}
+.inputLinePreco{
+    padding: 5px;
+    margin-right: 5px;
+  
+    display: flex;
+  
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.inputLinePreco input{
+    width: 100px;
+    
+    border: 0;
+    background-color: transparent;
+    color: #ccc;
+    outline: 0;
+}
+.inputLinePreco p{
+    color: #7b2cbf;
+}
+.inputLineSize{
+    padding: 5px;
+    margin-right: 5px;
+    
+    display: flex;
+    
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.inputLineSize input{
+    width: 100px;
+  
+    border: 0;
+    background-color: transparent;
+    color: #ccc;
+    outline: 0;
+}
+.inputLineSize p{
+    color: #7b2cbf;
+}
+.buttonContainer{
+    color: #ccc;
 }
