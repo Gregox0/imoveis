@@ -15,7 +15,7 @@
       <h3>Alugueis <span>Top</span></h3>
     </div>
     <nav>
-      <p>Voltar</p>
+      <p id="voltar">Voltar</p>
       <div id="logCadContainer">
         <button id="cadButton"><i class="fa-regular fa-user"></i> User</button>
       </div>
@@ -33,14 +33,14 @@
         <button onclick="dados('1', 'a')" class="cadButtonbutton" id="ab">Alugar</button>
       </div>
     </div>
-    <div class="cad dpNo">
+    <div class="cad">
       <h4>Qual o tipo do seu imovel?</h4>
       <div class="cadButton">
-        <button>Residencial</button>
-        <button>Comercial</button>
+        <button class="cadButtonbutton">Residencial</button>
+        <button class="cadButtonbutton">Comercial</button>
       </div>
     </div>
-    <div id="cadE" class="dpNo">
+    <div id="cadE">
       <div id="selectContainer" onclick="mostrarOpcoes()">
         <p>Apartamento</p>
         <div id="iContainer">
@@ -48,15 +48,15 @@
         </div>
       </div>
     </div>
-    <div class="cad dpNo">
+    <div class="cad">
       <h4>Qual o endereço do imóvel?</h4>
       <div class="ciE">
         <div id="cidadeContainer">
-          <label for="">Cidade</label>
+          <label for="" class="ciElabel">Cidade</label>
           <input type="text" placeholder="cidade" id="cidade">
         </div>
         <div id="estadoContainer">
-          <label for="">Estado</label>
+          <label for="" class="ciElabel">Estado</label>
           <input type="text" placeholder="estado" id="estado">
         </div>
       </div>
@@ -74,7 +74,64 @@
           <input type="text" placeholder="opcional" id="complemento">
         </div>
       </div>
-      <button type="submit" id="cadastrar">Cadastrar</button>
+      <button type="submit" id="cadastrar">Continuar</button>
+    </div>
+    <div class="cad">
+        <h4>informações sobre seu imovel:</h4>
+        <div id="info">
+            <label>Banheiros</label>
+            <div class="infoContainer">
+              <button onclick="bathroomCount('1')" id="br1" class="infoContainerbutton">1</button>
+              <button onclick="bathroomCount('2')" id="br2" class="infoContainerbutton">2</button>
+              <button onclick="bathroomCount('3')" id="br3" class="infoContainerbutton">3</button>
+              <button onclick="bathroomCount('4')" id="br4" class="infoContainerbutton">4+</button>
+            </div>
+            <label>Quartos</label>
+            <div class="infoContainer">
+              <button onclick="roomsCount('1')" id="r1" class="infoContainerbutton">1</button>
+              <button onclick="roomsCount('2')" id="r2" class="infoContainerbutton">2</button>
+              <button onclick="roomsCount('3')" id="r3" class="infoContainerbutton">3</button>
+              <button onclick="roomsCount('4')" id="r4" class="infoContainerbutton">4+</button>
+            </div>
+        </div>
+        <div class="preco">
+            <p id="p">Preço</p>
+            <div class="buttons">
+              <div class="buttonContainer">
+                <label>min</label>
+                <div class="inputLinePreco">
+                  <p>R$</p>
+                  <input type="text" id="precoMin" placeholder="0">
+                </div>
+              </div>
+              <div class="buttonContainer">
+                <label>max</label>
+                <div class="inputLinePreco">
+                  <p>R$</p>
+                  <input type="text" id="precoMax" placeholder="0">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="preco">
+            <p id="p">Área</p>
+            <div class="buttons">
+              <div class="buttonContainer">
+                <label>min</label>
+                <div class="inputLineSize">
+                  <input type="text" id="sizeMin" placeholder="0">
+                  <p>m²</p>
+                </div>
+              </div>
+              <div class="buttonContainer">
+                <label>max</label>
+                <div class="inputLineSize">
+                  <input type="text" id="sizeMax" placeholder="0">
+                  <p>m²</p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
   </main>
   <script src="scripts/anunciar.js"></script>
