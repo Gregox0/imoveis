@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+
+  margin: 0;
+  
+  font-family: 'Poppins', sans-serif;
+}
+header{
+  margin: 15px;
+  
+
+  display: flex;
+  justify-content: space-between;
+}
+header span{
+  color: #007ea7;
+}
+nav{
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+}
+nav p{
+  transition: all ease 0.3s;
+}
+nav p:hover{
+  color: #007ea7;
+  cursor: pointer;
+}
+#cadButton{
+  padding: 10px;
+
+  background-color: #007ea7;
+  color: #fff;
+  border: 2px solid #007ea7;
+  border-radius: 10px;
+
+  transition: all ease 0.3s;
+}
+#cadButton:hover{
+  background-color: #027399;
+  cursor: pointer;
+}
+#logButton{
+  padding: 10px 15px;
+
+  background-color: transparent;
+  color: #027399;
+  border: 2px solid #007ea7;
+  border-radius: 10px;
+
+  transition: all ease 0.3s;
+}
+#logButton:hover{
+  background-color: #027399;
+  color: #fff;
+}
+main{
+  width: 100vw;
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#mainText{
+  margin-top: 40px
+}
+.cad{
+  margin-top: 40px;
+}
+.cadButton{
+  display: flex;
+}
+.cadButtonbutton{
+  padding: 10px 15px;
+  margin: 5px;
+  
+  width: 150px;
+
+  background-color: transparent;
+  color: #027399;
+  border: 1px solid #007ea7;
+  border-radius: 3px;
+}
+#selectContainer{
+  padding: 8px 15px;
+  width: 280px;
+  
+  display: flex;
+  justify-content: center;
+  
+  border: 1px solid #007ea7;
+  border-radius: 3px;
+  color: #ccc;
+}
+#iContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#iContainer i{
+  color: #007ea7;
+}
+#cadE{
+  margin-top: 15px;
+}
+.ciE{
+  display: flex;
+}
+.ciE label{
+  color: #ccc;
+}
+#cidadeContainer, #estadoContainer{
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+}
+#cidade{
+  padding: 10px;
+  
+  width: 220px;
+  
+  border: 1px solid #898989;
+  border-radius: 3px;
+  color: #ccc;
+  outline: 0;
+}
+
+#estado{
+  padding: 10px;
+
+  width: 50px;
+
+  border: 1px solid #898989;
+  border-radius: 3px;
+  color: #ccc;
+  outline: 0;
+}
+#enderecoContainer{
+  margin-top: 5px;
+  
+  display: flex;
+  flex-direction: column;
+}
+#enderecoContainer label{
+  color: #ccc;
+}
+#endereco{
+  padding: 10px;
+
+  width: 297px;
+
+  border: 1px solid #898989;
+  border-radius: 3px;
+  color: #ccc;
+  outline: 0;
+}
+#numeroContainer{
+  margin-top: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+#numeroContainer label{
+  color: #ccc;
+}
+#numero{
+  padding: 10px;
+
+  width: 150px;
+
+  border: 1px solid #898989;
+  border-radius: 3px;
+  color: #ccc;
+  outline: 0;
+}
+#complementoContainer{
+  margin-top: 5px;
+  margin-left: 5px;
+
+  display: flex;
+  flex-direction: column;
+}
+#complementoContainer label{
+  color: #ccc;
+}
+#complemento{
+  padding: 10px;
+
+  width: 120px;
+
+  border: 1px solid #898989;
+  border-radius: 3px;
+  color: #ccc;
+  outline: 0;
+}
+#cadastrar{
+  padding: 10px;
+  margin-top: 20px;
+  
+  width: 318px;
+  
+  background-color: #007ea7;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+}
+.dpNo{
+  display: none;
+}
+.selected {
+  padding: 10px 15px;
+  margin: 5px;
+
+  width: 150px;
+
+  background-color: #007ea7;
+  color: #fff;
+  border: 1px solid #007ea7;
+  border-radius: 3px;
+}
