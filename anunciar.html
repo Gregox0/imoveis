@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="styles/anunciar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div id="title">
+      <h3>Alugueis <span>Top</span></h3>
+    </div>
+    <nav>
+      <p>Voltar</p>
+      <div id="logCadContainer">
+        <button id="cadButton"><i class="fa-regular fa-user"></i> User</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div id="mainText">
+      <h2>Vamos cadastrar seu imóvel</h2>
+      <p>  Inicie seu cadastro, é rapido e facil.</p>
+    </div>
+    <div class="cad">
+      <h4>O que deseja fazer?</h4>
+      <div class="cadButton">
+        <button onclick="dados('1', 'v')" class="cadButtonbutton" id="vb">Vender</button>
+        <button onclick="dados('1', 'a')" class="cadButtonbutton" id="ab">Alugar</button>
+      </div>
+    </div>
+    <div class="cad dpNo">
+      <h4>Qual o tipo do seu imovel?</h4>
+      <div class="cadButton">
+        <button>Residencial</button>
+        <button>Comercial</button>
+      </div>
+    </div>
+    <div id="cadE" class="dpNo">
+      <div id="selectContainer" onclick="mostrarOpcoes()">
+        <p>Apartamento</p>
+        <div id="iContainer">
+          <i class="fa-solid fa-chevron-up"></i>
+        </div>
+      </div>
+    </div>
+    <div class="cad dpNo">
+      <h4>Qual o endereço do imóvel?</h4>
+      <div class="ciE">
+        <div id="cidadeContainer">
+          <label for="">Cidade</label>
+          <input type="text" placeholder="cidade" id="cidade">
+        </div>
+        <div id="estadoContainer">
+          <label for="">Estado</label>
+          <input type="text" placeholder="estado" id="estado">
+        </div>
+      </div>
+      <div id="enderecoContainer">
+        <label for="">Endereço</label>
+        <input type="text" placeholder="Endereço" id="endereco">
+      </div>
+      <div class="ciE">
+        <div id="numeroContainer">
+          <label for="Numero">Numero</label>
+          <input type="text" placeholder="Informe o numero" id="numero">
+        </div>
+        <div id="complementoContainer">
+          <label for="complemento">complemento</label>
+          <input type="text" placeholder="opcional" id="complemento">
+        </div>
+      </div>
+      <button type="submit" id="cadastrar">Cadastrar</button>
+    </div>
+  </main>
+  <script src="scripts/anunciar.js"></script>
+</body>
+
+  </html>
