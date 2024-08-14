@@ -26,7 +26,7 @@
       <h2>Vamos cadastrar seu imóvel</h2>
       <p>  Inicie seu cadastro, é rapido e facil.</p>
     </div>
-    <div class="cad">
+    <div class="cad" id="wantContainer">
       <h4>O que deseja fazer?</h4>
       <div class="cadButton">
         <button onclick="toggleWant('v')"class="cadButtonbutton" id="vb">Vender</button>
@@ -129,7 +129,7 @@
       </div>
       <button onclick="verify()" type="submit" id="cadastrarContainer" class="dpNo">Continuar</button>
     </div>
-    <div class="cad dpNo">
+    <div class="cad dpNo" id="slaContainer">
         <h4>informações sobre seu imovel:</h4>
         <div id="info">
             <label>Banheiros</label>
@@ -147,7 +147,7 @@
               <button onclick="roomsCount('4')" id="r4" class="infoContainerbutton">4+</button>
             </div>
         </div>
-        <div class="preco dpNo">
+        <div class="preco dpNo" id="precoContainer">
             <p id="p">Preço</p>
             <div class="buttons">
               <div class="buttonContainer">
@@ -166,7 +166,7 @@
               </div>
             </div>
         </div>
-        <div class="preco dpNo">
+        <div class="preco dpNo" id="sizeContainer">
             <p id="p">Área</p>
             <div class="buttons">
               <div class="buttonContainer">
