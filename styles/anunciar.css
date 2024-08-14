@@ -83,6 +83,8 @@ main{
   color: #7b2cbf;
   border: 1px solid #7b2cbf;
   border-radius: 3px;
+  
+  transition: 0.3s all
 }
 #selectContainer{
   padding: 8px 15px;
@@ -103,14 +105,14 @@ main{
 #iContainer i{
   color: #7b2cbf;
 }
-#cadE{
+#slcContainer{
   margin-top: 15px;
 }
 .ciE{
   display: flex;
 }
 .ciElabel{
-  color: #7b2cbf;
+  color: #898989;
 }
 #cidadeContainer, #estadoContainer{
   margin-right: 5px;
@@ -138,16 +140,16 @@ main{
   color: #ccc;
   outline: 0;
 }
-#enderecoContainer{
+#ruaContainer{
   margin-top: 5px;
   
   display: flex;
   flex-direction: column;
 }
-#enderecoContainer label{
-  color: #7b2cbf;
+#ruaContainer label{
+  color: #898989;
 }
-#endereco{
+#rua{
   padding: 10px;
 
   width: 297px;
@@ -164,7 +166,7 @@ main{
   flex-direction: column;
 }
 #numeroContainer label{
-  color: #7b2cbf;
+  color: #898989;
 }
 #numero{
   padding: 10px;
@@ -184,7 +186,7 @@ main{
   flex-direction: column;
 }
 #complementoContainer label{
-  color: #7b2cbf;
+  color: #898989;
 }
 #complemento{
   padding: 10px;
@@ -196,7 +198,7 @@ main{
   color: #ccc;
   outline: 0;
 }
-#cadastrar{
+#cadastrarContainer{
   padding: 10px;
   margin-top: 20px;
   
@@ -220,6 +222,8 @@ main{
   color: #fff;
   border: 1px solid #7b2cbf;
   border-radius: 3px;
+  
+  transition: 0.3s all
 }
 #info{
     padding: 10px;
@@ -295,4 +299,28 @@ main{
 }
 .buttonContainer{
     color: #ccc;
+}
+#optionsContainer{
+  padding: 10px;
+  margin-top: 10px;
+  
+  position: absolute;
+  display: none;
+  
+  width: 290px;
+  overflow-x: auto;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  font-size: small;
+  color: #898989;
+  z-index: 1;
+}
+.option{
+  margin-left: 15px;
+  gap: 3px;
+  
+  display: flex;
+  
+  color: #ccc;
 }
