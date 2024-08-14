@@ -29,26 +29,79 @@
     <div class="cad">
       <h4>O que deseja fazer?</h4>
       <div class="cadButton">
-        <button onclick="dados('1', 'v')" class="cadButtonbutton" id="vb">Vender</button>
-        <button onclick="dados('1', 'a')" class="cadButtonbutton" id="ab">Alugar</button>
+        <button onclick="toggleWant('v')"class="cadButtonbutton" id="vb">Vender</button>
+        <button onclick="toggleWant('a')"class="cadButtonbutton" id="ab">Alugar</button>
       </div>
     </div>
-    <div class="cad">
+    <div class="cad dpNo" id="typeContainer">
       <h4>Qual o tipo do seu imovel?</h4>
       <div class="cadButton">
-        <button class="cadButtonbutton">Residencial</button>
-        <button class="cadButtonbutton">Comercial</button>
+        <button onclick="toggleType('r')" class="cadButtonbutton" id="rb">Residencial</button>
+        <button onclick="toggleType('c')" class="cadButtonbutton" id="cb">Comercial</button>
       </div>
     </div>
-    <div id="cadE">
+    <div id="slcContainer" class="dpNo">
       <div id="selectContainer" onclick="mostrarOpcoes()">
-        <p>Apartamento</p>
+        <p id="barra">Escolha uma opção</p>
         <div id="iContainer">
           <i class="fa-solid fa-chevron-up"></i>
         </div>
       </div>
+      <div id="optionsContainer">
+        <div id="residencial" class="dpNo">
+          <p>Residencial</p>
+          <div class="opc">
+            <div class="option">
+              <input type="checkbox" value="RA" class="property-checkbox">
+              <p>Apartamento</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="RK" class="property-checkbox">
+              <p>Kitnet</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="RCC" class="property-checkbox">
+              <p>Casa de condomínio</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="RTL" class="property-checkbox">
+              <p>Terreno / lote</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="RFSC" class="property-checkbox">
+              <p>Fazenda / sítio / chácara</p>
+            </div>
+          </div>
+        </div>
+        <div id="comercial">
+          <p>Comercial</p>
+          <div class="opc">
+            <div class="option">
+              <input type="checkbox" value="CLSP" class="property-checkbox">
+              <p>Loja / salão / ponto comercial</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="CHMP" class="property-checkbox">
+              <p>Hotel / Motel / Pousada</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="CGDA" class="property-checkbox">
+              <p>Galpão / Deposito / Armazém </p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="CG" class="property-checkbox">
+              <p>Garagem</p>
+            </div>
+            <div class="option">
+              <input type="checkbox" value="CTLC" class="property-checkbox">
+              <p>Terreno / lote comercial </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
-    <div class="cad">
+    <div class="cad dpNo" id="cadContainer">
       <h4>Qual o endereço do imóvel?</h4>
       <div class="ciE">
         <div id="cidadeContainer">
@@ -60,23 +113,23 @@
           <input type="text" placeholder="estado" id="estado">
         </div>
       </div>
-      <div id="enderecoContainer">
-        <label for="">Endereço</label>
-        <input type="text" placeholder="Endereço" id="endereco">
+      <div id="ruaContainer">
+        <label for="">Rua</label>
+        <input type="text" placeholder="Rua" id="rua">
       </div>
       <div class="ciE">
         <div id="numeroContainer">
           <label for="Numero">Numero</label>
-          <input type="text" placeholder="Informe o numero" id="numero">
+          <input type="text" placeholder="Numero" id="numero">
         </div>
         <div id="complementoContainer">
           <label for="complemento">complemento</label>
           <input type="text" placeholder="opcional" id="complemento">
         </div>
       </div>
-      <button type="submit" id="cadastrar">Continuar</button>
+      <button onclick="verify()" type="submit" id="cadastrarContainer" class="dpNo">Continuar</button>
     </div>
-    <div class="cad">
+    <div class="cad dpNo">
         <h4>informações sobre seu imovel:</h4>
         <div id="info">
             <label>Banheiros</label>
@@ -94,7 +147,7 @@
               <button onclick="roomsCount('4')" id="r4" class="infoContainerbutton">4+</button>
             </div>
         </div>
-        <div class="preco">
+        <div class="preco dpNo">
             <p id="p">Preço</p>
             <div class="buttons">
               <div class="buttonContainer">
@@ -113,7 +166,7 @@
               </div>
             </div>
         </div>
-        <div class="preco">
+        <div class="preco dpNo">
             <p id="p">Área</p>
             <div class="buttons">
               <div class="buttonContainer">
