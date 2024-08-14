@@ -4,7 +4,7 @@ document.getElementById('logButton').addEventListener('click', () => {
 document.getElementById('cadButton').addEventListener('click', () => {
     window.location.href = 'loginCad.html?action=cadastro'
 })
-document.getElementById('anunciarButton').addEventListener('click', () =>
+document.getElementById('anunciarButton').addEventListener('click', () => {
     window.location.href = 'anunciar.html'
 })
 let estado = true
