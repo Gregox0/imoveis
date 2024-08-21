@@ -207,3 +207,27 @@ function bathroomCount(value){
         changeDisplay('size')
     }
   }
+function checkInputs() {
+  const precoMin = document.getElementById('precoMin').value;
+  const precoMax = document.getElementById('precoMax').value;
+  const sizeMin = document.getElementById('sizeMin').value;
+  const sizeMax = document.getElementById('sizeMax').value;
+
+  if (precoMin && precoMax && sizeMin && sizeMax) {
+    changeDisplay('image')
+  } 
+}
+
+document.getElementById('precoMin').addEventListener('input', checkInputs);
+document.getElementById('precoMax').addEventListener('input', checkInputs);
+document.getElementById('sizeMin').addEventListener('input', checkInputs);
+document.getElementById('sizeMax').addEventListener('input', checkInputs);
+
+let imageContainer = document.getElementById('imageContainer')
+let imageView = document.getElementById('imgContainer')
+let inputFile = document.getElementById('inputFile')
+
+inputFile.addEventListener('change', () => {
+  let imgLink = URL.createObjectURL(inputFile.files[0])
+  imageView.style.backgroundImage = `url($(imgLink))`
+})
