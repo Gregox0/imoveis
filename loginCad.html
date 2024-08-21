@@ -16,7 +16,7 @@
           <div id="title">
             <h3>login</h3>
           </div>
-          <div id="form">
+          <form id="form">
             <div id="inputLineUser">
               <i class="fa-solid fa-user"></i>
               <input type="text" placeholder="Exemplo " id="user">.
@@ -30,11 +30,11 @@
               <input type="password" placeholder="Ex-12345" id="pass">
               <i class="fa-regular fa-eye-slash" onclick="change('eye')" id="eye"></i>
             </div>
-          </div>
-          <div id="submit">
-            <button onclick="verify()">Logar</button>
-            <p id="es">Ainda não tem uma conta? <span onclick="change('')">Clique aqui.</span></p>
-          </div>
+            <div id="submit">
+              <button onclick="verify()">Logar</button>
+              <p id="es">Ainda não tem uma conta? <span onclick="change('')">Clique aqui.</span></p>
+            </div>
+          </form>
         </div>
     </div>
     <script src="scripts/loginCad.js"></script>
