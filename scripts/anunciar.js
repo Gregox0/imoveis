@@ -3,8 +3,13 @@ document.getElementById('voltar').addEventListener('click', () => {
 })
 let dados = {
   acao: null,
-  type: null,
-  imovel: null
+  tipo: null,
+  imovel: null,
+  endereco: null,
+  rm: null,
+  br: null,
+  preco: null,
+  size: null
 }
 let currentButton = {
   button: null,
@@ -33,7 +38,7 @@ function toggleWant(identify) {
 }
 function toggleType(identify) {
   if (currentButtonType.buttonIdentify != identify) {
-    dados.type = identify
+    dados.tipo = identify
     let button = document.getElementById(identify + 'b')
     currentButtonType.buttonIdentify = identify
 
@@ -118,7 +123,7 @@ function verify() {
       numero: numero.value,
       complemento: complemento.value
     };
-
+    dados.endereco = endereco
     if (cidade.value == "") {
         let container = document.getElementById('cidade');
         setTimeout(() => {
@@ -163,71 +168,63 @@ let br = 0
 let currentbr = null
 function bathroomCount(value){
     let brButton = document.getElementById('br' + value)
-    if (br == value) {
-      brButton.classList.remove('infoContainerbuttonclicked')
-      brButton.classList.add('infoContainerbutton')
-      br = 0
-      currentbr = null
-    }else{
-      br = value
-      if (currentbr != null) {
-        currentbr.classList.remove('infoContainerbuttonclicked')
-        currentbr.classList.add('infoContainerbutton')
-      }
-      brButton.classList.remove('infoContainerbutton')
-      brButton.classList.add('infoContainerbuttonclicked')
-      currentbr = brButton
+    br = value
+    dados.br = br
+    if (currentbr != null) {
+      currentbr.classList.remove('infoContainerbuttonclicked')
+      currentbr.classList.add('infoContainerbutton')
     }
-    if(rm != 0 && br != 0){
-        changeDisplay('preco')
-        changeDisplay('size')
+    brButton.classList.remove('infoContainerbutton')
+    brButton.classList.add('infoContainerbuttonclicked')
+    currentbr = brButton
+    if (rm != 0 && br != 0) {
+      changeDisplay('preco')
+      changeDisplay('size')
     }
   }
   let rm = 0
   let currentRoom = null
   function roomsCount(value) {
     let rmButton = document.getElementById('r' + value)
-    if (rm == value) {
-      rmButton.classList.remove('infoContainerbuttonclicked')
-      rmButton.classList.add('infoContainerbutton')
-      rm = 0
-      currentRoom = null
-    }else{
-      rm = value
-      if (currentRoom != null) {
-        currentRoom.classList.remove('infoContainerbuttonclicked')
-        currentRoom.classList.add('infoContainerbutton')
-      }
-      rmButton.classList.remove('infoContainerbutton')
-      rmButton.classList.add('infoContainerbuttonclicked')
-      currentRoom = rmButton
+    rm = value
+    dados.rm = rm
+    if (currentRoom != null) {
+      currentRoom.classList.remove('infoContainerbuttonclicked')
+      currentRoom.classList.add('infoContainerbutton')
     }
-    if(rm != 0 && br != 0){
-        changeDisplay('preco')
-        changeDisplay('size')
+    rmButton.classList.remove('infoContainerbutton')
+    rmButton.classList.add('infoContainerbuttonclicked')
+    currentRoom = rmButton
+    if (rm != 0 && br != 0) {
+      changeDisplay('preco')
+      changeDisplay('size')
     }
   }
 function checkInputs() {
-  const precoMin = document.getElementById('precoMin').value;
-  const precoMax = document.getElementById('precoMax').value;
-  const sizeMin = document.getElementById('sizeMin').value;
-  const sizeMax = document.getElementById('sizeMax').value;
-
-  if (precoMin && precoMax && sizeMin && sizeMax) {
-    changeDisplay('image')
+  const preco = document.getElementById('preco').value;
+  const size = document.getElementById('size').value;
+  if (preco && size) {
+    let = changeDisplay('dropImage')
+    dados.preco = preco
+    dados.size = size
   } 
 }
 
-document.getElementById('precoMin').addEventListener('input', checkInputs);
-document.getElementById('precoMax').addEventListener('input', checkInputs);
-document.getElementById('sizeMin').addEventListener('input', checkInputs);
-document.getElementById('sizeMax').addEventListener('input', checkInputs);
+document.getElementById('preco').addEventListener('input', checkInputs);
+document.getElementById('size').addEventListener('input', checkInputs);
 
 let imageContainer = document.getElementById('imageContainer')
 let imageView = document.getElementById('imgContainer')
 let inputFile = document.getElementById('inputFile')
 
 inputFile.addEventListener('change', () => {
-  let imgLink = URL.createObjectURL(inputFile.files[0])
-  imageView.style.backgroundImage = `url($(imgLink))`
-})
+  let url = URL.createObjectURL(inputFile.files[0]);
+  imageView.style.backgroundImage = `url(${url})`;
+  imageView.textContent = ''
+  changeDisplay('anunciar')
+  console.log('hsh')
+});
+function anunciar() {
+  console.log(dados)
+  window.location.href = 'index.html'
+}
