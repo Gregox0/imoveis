@@ -129,7 +129,7 @@
       </div>
       <button onclick="verify()" type="submit" id="cadastrarContainer" class="dpNo">Continuar</button>
     </div>
-    <div class="cad" id="slaContainer">
+    <div class="cad dpNo" id="slaContainer">
       <h4>informações sobre seu imovel:</h4>
       <div id="info">
         <label>Banheiros</label>
@@ -151,17 +151,9 @@
         <p id="p">Preço</p>
         <div class="buttons">
           <div class="buttonContainer">
-            <label>min</label>
             <div class="inputLinePreco">
               <p>R$</p>
-              <input type="text" id="precoMin" placeholder="0">
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <label>max</label>
-            <div class="inputLinePreco">
-              <p>R$</p>
-              <input type="text" id="precoMax" placeholder="0">
+              <input type="text" id="preco" placeholder="0">
             </div>
           </div>
         </div>
@@ -170,34 +162,28 @@
         <p id="p">Área</p>
         <div class="buttons">
           <div class="buttonContainer">
-            <label>min</label>
             <div class="inputLineSize">
-              <input type="text" id="sizeMin" placeholder="0">
-              <p>m²</p>
-            </div>
-          </div>
-          <div class="buttonContainer">
-            <label>max</label>
-            <div class="inputLineSize">
-              <input type="text" id="sizeMax" placeholder="0">
+              <input type="text" id="size" placeholder="0">
               <p>m²</p>
             </div>
           </div>
         </div>
       </div>
-      <label for="inputFile"id="imageContainer">
-        <input type="file" accept="image/*" id="inputFile">
-        <div id="imgContainer">
-          <img src="assets/Downloadicon.png" alt="">
-          <h3>Arraste ou clique para escolher uma imagem</h3>
-          <p>Escolha qualquer imagem dos seus arquivos</p>
-        </div>
-      </label>
+      <div id="dropImageContainer" class="dpNo">
+        <label for="inputFile" id="imageContainer" class="dpNo">
+          <input type="file" accept="image/*" id="inputFile">
+           <div id="imgContainer">
+            <img src="assets/Downloadicon.png" alt="">
+            <h3>Arraste ou clique para escolher uma imagem</h3>
+            <p>Escolha qualquer imagem dos seus arquivos</p>
+          </div>
+        </label>
+      </div>
       <button class="dpNo"
-      type="submit" id="cadastrarContainer">Anunciar</button>
+      type="submit" id="anunciarContainer" onclick="anunciar()">Anunciar</button>
     </div>
   </main>
   <script src="scripts/anunciar.js"></script>
 </body>
 
-</html>
+  </html>
